@@ -50,9 +50,9 @@ def fetch_issue_title(issue_id):
 	So i'm gonna use subprocess and curl.
 	'''
 	req_url = "https://bitbucket.org/api/1.0/repositories/{accountname}/{repo_slug}/issues/{issue_id}"
-	url = req_url.format(accountname="anoosmar", repo_slug="vaultize-issues", issue_id=issue_id)
+	url = req_url.format(accountname="account", repo_slug="repo", issue_id=issue_id)
 	credentials = "{0}:{1}".format(user, passwd)
-	default = 'https://bitbucket.org/anoosmar/vaultize-issues/issues/' + issue_id
+	default = 'https://bitbucket.org/account/repo/issues/' + issue_id
 	
 	try:
 		out = subprocess.check_output(["curl", "-s", "--user", credentials, url])
