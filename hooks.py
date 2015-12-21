@@ -88,7 +88,7 @@ def add_issue_details(repo, ui, *args, **kwargs):
 			_msg = u''.join(_msg.split('\n', 1)[1:])
 			new_msg = _title + new_msg
 
-		if _msg:
+		if new_msg:
 			_msg = '-'*10 + 'BEGIN COMMIT MSG' + '-'*10 + '\n' + _msg
 		
 		ctx._text = new_msg.encode("utf-8") + _msg.encode("utf-8")
