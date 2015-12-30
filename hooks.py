@@ -95,7 +95,7 @@ def post_comment(issue_id, repo, comment=''):
 	credentials = "{0}:{1}".format(user, passwd)
 
 	commit = "Commit: " + repo.hex() + "  \n"
-	date = "Verify after build generated after " + time.ctime(time.time()) + "  \n"
+	date = "Verify with build generated after " + time.ctime(time.time()) + "  \n"
 
 	if comment:
 		comment += "\n" + commit
